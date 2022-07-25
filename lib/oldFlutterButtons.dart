@@ -6,9 +6,14 @@ void main()=>runApp(FlutterButtons());
 class  FlutterButtons extends StatelessWidget {
   
 
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.blue,
+      ),
+    home: Scaffold(
       appBar: AppBar(
         title: Text("FlutterButtons"),
         
@@ -23,11 +28,11 @@ class  FlutterButtons extends StatelessWidget {
             child: Text('A Raised Button'),
             onPressed:(){
               print('Pressed raised button');
-            },
-            ),
+              }
+              ),
             FlatButton(
               child:Text("A Flat button"),
-              textColor: Colors.blue,
+              textColor: Colors.white,
                onPressed: (){
                 print("Pressed a Flat button");
                },
@@ -42,6 +47,7 @@ class  FlutterButtons extends StatelessWidget {
         ),
       ),   
 
+    )
     );
   }
 }
